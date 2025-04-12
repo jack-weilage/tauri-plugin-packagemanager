@@ -4,6 +4,7 @@ permissions = [
 	"allow-check-permissions",
 	"allow-request-permissions",
 	"allow-get-installed-applications",
+	"allow-get-visible-applications",
 	"allow-get-application-info",
 	"allow-get-application-icon",
 ]

@@ -343,6 +343,18 @@
           "markdownDescription": "Denies the get_installed_applications command without any pre-configured scope."
         },
         {
+          "description": "Enables the get_visible_applications command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-get-visible-applications",
+          "markdownDescription": "Enables the get_visible_applications command without any pre-configured scope."
+        },
+        {
+          "description": "Denies the get_visible_applications command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-get-visible-applications",
+          "markdownDescription": "Denies the get_visible_applications command without any pre-configured scope."
+        },
+        {
           "description": "Enables the request_permissions command without any pre-configured scope.",
           "type": "string",
           "const": "allow-request-permissions",
@@ -355,10 +367,10 @@
           "markdownDescription": "Denies the request_permissions command without any pre-configured scope."
         },
         {
-          "description": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-check-permissions`\n- `allow-request-permissions`\n- `allow-get-installed-applications`\n- `allow-get-application-info`\n- `allow-get-application-icon`",
+          "description": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-check-permissions`\n- `allow-request-permissions`\n- `allow-get-installed-applications`\n- `allow-get-visible-applications`\n- `allow-get-application-info`\n- `allow-get-application-icon`",
           "type": "string",
           "const": "default",
-          "markdownDescription": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-check-permissions`\n- `allow-request-permissions`\n- `allow-get-installed-applications`\n- `allow-get-application-info`\n- `allow-get-application-icon`"
+          "markdownDescription": "Default permissions for the plugin\n#### This default permission set includes:\n\n- `allow-check-permissions`\n- `allow-request-permissions`\n- `allow-get-installed-applications`\n- `allow-get-visible-applications`\n- `allow-get-application-info`\n- `allow-get-application-icon`"
         }
       ]
     }

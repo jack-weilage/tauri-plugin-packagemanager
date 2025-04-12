@@ -39,6 +39,7 @@ pub fn init<R: Runtime>() -> TauriPlugin<R> {
             commands::check_permissions,
             commands::request_permissions,
             commands::get_installed_applications,
+            commands::get_visible_applications,
             commands::get_application_info,
             commands::get_application_icon,
         ])

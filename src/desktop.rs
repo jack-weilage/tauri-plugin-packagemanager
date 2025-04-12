@@ -26,6 +26,9 @@ impl<R: Runtime> Packagemanager<R> {
     ) -> crate::Result<GetInstalledApplicationsResponse> {
         unimplemented!()
     }
+    pub fn get_visible_applications(&self) -> crate::Result<GetVisibleApplicationsResponse> {
+        unimplemented!()
+    }
     pub fn get_application_info(
         &self,
         payload: GetApplicationInfoRequest,

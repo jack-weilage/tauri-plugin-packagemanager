@@ -2,6 +2,7 @@ const COMMANDS: &[&str] = &[
     "check_permissions",
     "request_permissions",
     "get_installed_applications",
+    "get_visible_applications",
     "get_application_info",
     "get_application_icon",
 ];

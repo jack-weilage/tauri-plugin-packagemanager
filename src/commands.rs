@@ -23,6 +23,13 @@ pub(crate) async fn get_installed_applications<R: Runtime>(
 }
 
 #[command]
+pub(crate) async fn get_visible_applications<R: Runtime>(
+    app: AppHandle<R>,
+) -> Result<GetVisibleApplicationsResponse> {
+    app.packagemanager().get_visible_applications()
+}
+
+#[command]
 pub(crate) async fn get_application_info<R: Runtime>(
     app: AppHandle<R>,
     payload: GetApplicationInfoRequest,

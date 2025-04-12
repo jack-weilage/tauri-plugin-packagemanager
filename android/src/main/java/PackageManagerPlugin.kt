@@ -60,6 +60,20 @@ class PackageManagerPlugin(private val activity: Activity): Plugin(activity) {
     }
 
     @Command
+    fun getVisibleApplications(invoke: Invoke) {
+        val applicationList = JSArray()
+        val applications = implementation.getVisibleApplications()
+
+        for (application in applications) {
+            applicationList.put(implementation.applicationInfoToObject(application))
+        }
+
+        val ret = JSObject()
+        ret.put("applications", applicationList)
+        invoke.resolve(ret)
+    }
+
+    @Command
     fun getApplicationInfo(invoke: Invoke) {
         val args = invoke.parseArgs(GetApplicationInfoArgs::class.java)
 

@@ -7,6 +7,7 @@ Default permissions for the plugin
 - `allow-check-permissions`
 - `allow-request-permissions`
 - `allow-get-installed-applications`
+- `allow-get-visible-applications`
 - `allow-get-application-info`
 - `allow-get-application-icon`
 
@@ -119,6 +120,32 @@ Enables the get_installed_applications command without any pre-configured scope.
 <td>
 
 Denies the get_installed_applications command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`packagemanager:allow-get-visible-applications`
+
+</td>
+<td>
+
+Enables the get_visible_applications command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`packagemanager:deny-get-visible-applications`
+
+</td>
+<td>
+
+Denies the get_visible_applications command without any pre-configured scope.
 
 </td>
 </tr>

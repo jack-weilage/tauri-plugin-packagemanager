@@ -4,6 +4,7 @@ export interface ApplicationInfo {
 	packageName: string;
 	name: string;
 	flags: number;
+	category?: number;
 }
 
 export async function checkPermissions(): Promise<PermissionState> {
@@ -24,6 +25,13 @@ export async function getInstalledApplications(flags: number = 0): Promise<Appli
 	const { applications } = await invoke<{ applications: ApplicationInfo[] }>(
 		"plugin:packagemanager|get_installed_applications",
 		{ payload: { flags } },
+	);
+
+	return applications;
+}
+export async function getVisibleApplications(): Promise<ApplicationInfo[]> {
+	const { applications } = await invoke<{ applications: ApplicationInfo[] }>(
+		"plugin:packagemanager|get_visible_applications",
 	);
 
 	return applications;

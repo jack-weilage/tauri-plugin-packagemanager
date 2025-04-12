@@ -15,6 +15,12 @@ pub struct GetInstalledApplicationsResponse {
 
 #[derive(Debug, Clone, Default, Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
+pub struct GetVisibleApplicationsResponse {
+    pub applications: Vec<ApplicationInfo>,
+}
+
+#[derive(Debug, Clone, Default, Deserialize, Serialize)]
+#[serde(rename_all = "camelCase")]
 pub struct GetApplicationInfoRequest {
     pub package_name: String,
 }
@@ -46,6 +52,7 @@ pub struct ApplicationInfo {
     // pub icon: Option<String>,
     // pub description: Option<String>,
     pub flags: i64,
+    pub category: Option<i64>,
 }
 
 #[derive(Debug, Clone, Default, Deserialize, Serialize)]
