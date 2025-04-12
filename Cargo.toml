@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-packagemanager"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["Jack Weilage"]
 description = "A Tauri plugin for interfacing with the Android PackageManager API"
 repository = "https://github.com/jack-weilage/tauri-plugin-packagemanager"
