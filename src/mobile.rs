@@ -48,7 +48,7 @@ impl<R: Runtime> Packagemanager<R> {
     }
     pub fn get_visible_applications(&self) -> crate::Result<GetVisibleApplicationsResponse> {
         self.0
-            .run_mobile_plugin("getVisibleApplications")
+            .run_mobile_plugin("getVisibleApplications", ())
             .map_err(Into::into)
     }
     pub fn get_application_info(
