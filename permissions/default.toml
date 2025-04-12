@@ -1,0 +1,9 @@
+[default]
+description = "Default permissions for the plugin"
+permissions = [
+	"allow-check-permissions",
+	"allow-request-permissions",
+	"allow-get-installed-applications",
+	"allow-get-application-info",
+	"allow-get-application-icon",
+]

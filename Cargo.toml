@@ -1,0 +1,19 @@
+[package]
+name = "tauri-plugin-packagemanager"
+version = "0.1.0"
+authors = ["Jack Weilage"]
+description = "A Tauri plugin for interfacing with the Android PackageManager API"
+repository = "https://github.com/jack-weilage/tauri-plugin-packagemanager"
+edition = "2021"
+rust-version = "1.77.2"
+exclude = ["/examples", "/dist-js", "/guest-js", "/node_modules"]
+links = "tauri-plugin-packagemanager"
+
+[dependencies]
+tauri = { version = "2.4.1" }
+serde = "1.0"
+thiserror = "2"
+
+[build-dependencies]
+tauri-plugin = { version = "2.1.1", features = ["build"] }
+tauri-build = "2.1.1"
