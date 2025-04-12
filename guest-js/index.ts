@@ -8,18 +8,18 @@ export interface ApplicationInfo {
 }
 
 export async function checkPermissions(): Promise<PermissionState> {
-	const { state } = await invoke<{ state: PermissionState }>(
+	const { queryAllPackages } = await invoke<{ queryAllPackages: PermissionState }>(
 		"plugin:packagemanager|check_permissions",
 	);
 
-	return state;
+	return queryAllPackages;
 }
 export async function requestPermissions(): Promise<PermissionState> {
-	const { state } = await invoke<{ state: PermissionState }>(
+	const { queryAllPackages } = await invoke<{ queryAllPackages: PermissionState }>(
 		"plugin:packagemanager|request_permissions",
 	);
 
-	return state;
+	return queryAllPackages;
 }
 export async function getInstalledApplications(flags: number = 0): Promise<ApplicationInfo[]> {
 	const { applications } = await invoke<{ applications: ApplicationInfo[] }>(

@@ -58,5 +58,5 @@ pub struct ApplicationInfo {
 #[derive(Debug, Clone, Default, Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct PermissionStatus {
-    state: PermissionState,
+    query_all_packages: PermissionState,
 }
